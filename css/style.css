@@ -14,8 +14,8 @@ ul {
 /*button*/
 .button {
   color: var(--color-primary-light);
-  background-color: var(--color-brandt);
-  border: 2px solid var(--color-brandt);
+  background-color: var(--color-brandt-light);
+  border: 2px solid var(--color-brandt-light);
   border-radius: 8px;
   width: 238px;
   height: 59px;
