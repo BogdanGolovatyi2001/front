@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+.flex-containet {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  flex-basis: 100px;
+  height: 100px;
+  background-color: bisque;
+  padding: 10px;
+  border: 6px solid red;
+  margin: 10px;
+}
+
+.item:nth-child(2) {
+  order: 4;
+}
