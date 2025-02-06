@@ -46,19 +46,52 @@
   --color-brandt-light: #819b57;
   --color-brandt-dark: #465929;
 }
+/*base*/
 body {
   font-family: Poppins, sans-serif;
   color: var(--color-primary-dark);
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
 }
 address {
   font-style: normal;
 }
-/*base*/
+
 ul {
   list-style-type: none;
+}
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+
+.section {
+  padding: 48xp 0;
+}
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 /*button*/
 .button {
@@ -66,8 +99,7 @@ ul {
   background-color: var(--color-brandt-light);
   border: 2px solid var(--color-brandt-light);
   border-radius: 8px;
-  width: 238px;
-  height: 59px;
+  padding: 16px 32px;
   cursor: pointer;
   font-weight: 600;
 }
@@ -86,7 +118,11 @@ ul {
   font-weight: 600;
 }
 /*hero section*/
+.hero-section {
+  padding: 272px 0;
+}
 .hero-title {
+  margin-bottom: 0;
   color: var(--color-primary-light);
   text-align: center;
   font-size: 128px;
@@ -115,6 +151,14 @@ ul {
   color: var(--color-brandt-dark);
 }
 /*Traditional section*/
+.tradisions-title {
+  margin-bottom: 42px;
+}
+
+.tradisions-section {
+  padding-top: 96px;
+}
+
 .tradisions-text .brand {
   color: var(--color-brandt-light);
   font-weight: 600;
@@ -125,11 +169,19 @@ ul {
 }
 
 /*chefs-title*/
-.chefs-title {
+.chef-title {
   font-size: 40px;
   font-weight: 600;
+  margin-bottom: 16px;
+}
+.chefs-title {
+  margin-bottom: 80px;
 }
 /*format-title*/
+.formats-title {
+  margin-bottom: 80px;
+}
+
 .format-title {
   font-size: 24px;
   font-weight: 600;
@@ -140,6 +192,10 @@ ul {
   font-weight: 300;
 }
 
+/*CONTACT*/
+.contact-title {
+  margin-bottom: 16px;
+}
 /*footer*/
 .adress-link {
   font-size: 16px;
