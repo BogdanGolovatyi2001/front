@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 20px 0;
+  padding: 20px;
   transition: opacity 0.3s, visibility 0.3s;
 
   &.is-hidden {
@@ -26,13 +26,66 @@
   max-width: 880px;
   background-color: var(--color-primary-light);
   border-radius: 32px;
-  padding: 128px;
+  padding: 48px;
   overflow-y: auto;
+  text-align: center;
+
+  @media screen and (min-width: $bp-tablet) {
+    padding: 128px;
+  }
+  &::after {
+    position: absolute;
+    background-repeat: no-repeat;
+    bottom: 20px;
+    content: '';
+    background-image: url('../images/model-bread.png');
+    width: 151px;
+    height: 233px;
+    right: 20px;
+  }
+
+  &::before {
+    position: absolute;
+    background-repeat: no-repeat;
+    bottom: 20px;
+    content: '';
+    background-image: url('../images/text-spin.png');
+    height: 160px;
+    width: 160px;
+    right: 20px;
+    animation-name: spin;
+    animation: spin 10s infinite linear;
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 60px;
+    margin-bottom: 0;
+  }
+
+  &__btn-close-img {
+    fill: transparent;
+    stroke: var(--color-primary-dark);
+    height: 16px;
+    width: 16px;
+  }
 
   &__btn-close {
     position: absolute;
     right: 40px;
     top: 40px;
+    border: 0;
+    background-color: transparent;
   }
 
   &__form-field {
